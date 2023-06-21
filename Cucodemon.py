@@ -8,7 +8,7 @@ WIDTH = window.get_width()
 HEIGHT = window.get_height()
 
 # Cucodemon enemy sprite
-Cucodemon = pygame.transform.scale(pygame.image.load("Cucodemon.png").convert_alpha(), (75, 75))
+Cucodemon = pygame.transform.scale(pygame.image.load("Resources/Cucodemon.png").convert_alpha(), (75, 75))
 
 # Cucodemon class
 class Enemy:

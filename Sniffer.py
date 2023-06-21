@@ -8,7 +8,7 @@ WIDTH = window.get_width()
 HEIGHT = window.get_height()
 
 # Sniffer enemy sprite
-Sniffer = pygame.transform.scale(pygame.image.load("Sniffer.png").convert_alpha(), (75, 75))
+Sniffer = pygame.transform.scale(pygame.image.load("Resources/Sniffer.png").convert_alpha(), (75, 75))
 
 # Sniffer class
 class sEnemy:

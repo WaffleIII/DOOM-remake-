@@ -8,7 +8,7 @@ WIDTH = window.get_width()
 HEIGHT = window.get_height()
 
 # Demonic Soldier enemy sprite
-dSoldier = pygame.transform.scale(pygame.image.load("dSoldier.png").convert_alpha(), (75, 75))
+dSoldier = pygame.transform.scale(pygame.image.load("Resources/dSoldier.png").convert_alpha(), (75, 75))
 
 # Demon Soldier class
 class dEnemy:

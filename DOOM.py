@@ -27,7 +27,7 @@ levelOne = True
 cucosDeadT = True
 gOver = False
 gameOver = pygame.font.SysFont("Comic Sans MS", 56) 
-title = pygame.font.Font("Doom2016Right.ttf", 90)
+title = pygame.font.Font("Resources/Doom2016Right.ttf", 90)
 win = False
 gunMode = 1
 startScreen = True
@@ -46,12 +46,12 @@ RED = (255, 0, 0)
 BLACK = (0, 0, 0)
 
 # Background (level 1) and assorted music
-Hell = pygame.transform.scale(pygame.image.load("Hell.png").convert_alpha(), (WIDTH, HEIGHT))
-e1m1 = mixer.Sound("E1M1.mp3")
+Hell = pygame.transform.scale(pygame.image.load("Resources/Hell.png").convert_alpha(), (WIDTH, HEIGHT))
+e1m1 = mixer.Sound("Resources/E1M1.wav")
 
 # Background (level 2)
-Hell2 = pygame.transform.scale(pygame.image.load("Hell2.png").convert_alpha(), (WIDTH, HEIGHT))
-e2m1 = mixer.Sound("E2M1.mp3")
+Hell2 = pygame.transform.scale(pygame.image.load("Resources/Hell2.png").convert_alpha(), (WIDTH, HEIGHT))
+e2m1 = mixer.Sound("Resources/E2M1.wav")
 
 # Start Screen Text
 Start = title.render("Press SPACE to Start!", 0, RED)
@@ -67,7 +67,7 @@ Win = gameOver.render("You won!", 0, BLUE)
 Win2 = gameOver.render("You killed all the demons!", 0, BLUE)
 
 # Player Character and all of its needed variables (hitbox, hurtbox, health, etc.)
-Hilbert = pygame.transform.scale(pygame.image.load("Hilbert.png").convert_alpha(), (50, 50))
+Hilbert = pygame.transform.scale(pygame.image.load("Resources/Hilbert.png").convert_alpha(), (50, 50))
 HilBX = WIDTH/2
 HilBY = HEIGHT/2
 HilBox = Hilbert.get_rect()
@@ -85,10 +85,10 @@ enemies = []
 cProjectiles = []
 
 # Cucodemon character
-Cucodemon = pygame.transform.scale(pygame.image.load("Cucodemon.png").convert_alpha(), (75, 75))
+Cucodemon = pygame.transform.scale(pygame.image.load("Resources/Cucodemon.png").convert_alpha(), (75, 75))
 
 # Sniffer character
-Sniffer = pygame.transform.scale(pygame.image.load("Sniffer.png").convert_alpha(), (75, 75))
+Sniffer = pygame.transform.scale(pygame.image.load("Resources/Sniffer.png").convert_alpha(), (75, 75))
 
 # Shotgun Shot Projectile
 def sShot():
@@ -99,7 +99,7 @@ def sShot():
     else:
         shotTimer = 60 // shotsPerSecond
 
-        sPellet = pygame.transform.scale(pygame.image.load("Bullet.png").convert_alpha(), (25, 25))
+        sPellet = pygame.transform.scale(pygame.image.load("Resources/Bullet.png").convert_alpha(), (25, 25))
         sPx = HilBox.x + 10
         sPy = HilBox.y + 10
 
@@ -121,7 +121,7 @@ def aShot():
     else:
         shotTimer = 20 // shotsPerSecond
 
-        sPellet = pygame.transform.scale(pygame.image.load("Bullet.png").convert_alpha(), (25, 25))
+        sPellet = pygame.transform.scale(pygame.image.load("Resources/Bullet.png").convert_alpha(), (25, 25))
         sPx = HilBox.x + 10
         sPy = HilBox.y + 10
 
@@ -148,7 +148,7 @@ def cucoShoot():
         else:
             enemy.cucTimer = 60 // enemy.cucDPS
 
-            cProj = pygame.transform.scale(pygame.image.load("CucodemonProjectile.png").convert_alpha(), (25, 25))
+            cProj = pygame.transform.scale(pygame.image.load("Resources/CucodemonProjectile.png").convert_alpha(), (25, 25))
             cPx = enemy.rect.centerx + 10
             cPy = enemy.rect.centery + 10
     
